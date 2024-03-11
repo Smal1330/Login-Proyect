@@ -1,0 +1,15 @@
+
+{% extends 'Principal/base.html' %}
+
+{% block content %}
+<div>
+    {% if request.user.is_authenticated %}
+<h3 class="Welcome"> Bienvenido! {{ user.username | upper }}</h3>
+
+    {% else %}
+<h3 class="Welcome"> Bienvenido! Por favor Iniciar Sesión O registrarse para continuar</h3>
+
+</div>
+ {% endif %}
+
+{% endblock %}
